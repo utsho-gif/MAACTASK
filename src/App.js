@@ -9,6 +9,7 @@ function App() {
     <div className="max-w-7xl mx-auto px-12">
       <Header></Header>
       <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
           <Route path='/home' element={<Home></Home>}></Route>
       </Routes>
     </div>

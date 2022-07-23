@@ -3,9 +3,9 @@ import tablet from "../../asset/tablet 1.png";
 import phone from "../../asset/phone 1.png";
 import phone2 from "../../asset/Central phone 2.png";
 import gp from "../../asset/Group 34037.png";
-import gp1 from '../../asset/Group 34027.png';
-import p1 from '../../asset/Ellipse 1.png';
-
+import gp1 from "../../asset/Group 34027.png";
+import p1 from "../../asset/Ellipse 1.png";
+import Summary from "./Summary";
 
 const Home = () => {
   return (
@@ -115,22 +115,31 @@ const Home = () => {
       </div>
       <div className="flex justify-center mt-56 gap-x-36">
         <div className="">
-            <img src={gp1} width={484} height={588} alt="" />
+          <img src={gp1} width={484} height={588} alt="" />
         </div>
         <div>
-            <p className="font-semibold text-xl text-primary">About Us</p>
-            <h3 className="text-4xl mt-5 font-extrabold">A dedicated solution for <br /> startups and enterprises</h3>
-            <p className="text-xl mt-10">Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br /> accusantium doloremque laudantium, totam rem aperiam,<br /> eaque ipsa quae ab illo inventore veritatis et quasi architecto <br /> beatae vitae dicta sunt explicabo.</p>
-            <div className="flex justify-center items-center mt-20 gap-x-12 mr-24">
-                <img src={p1} alt="" />
-                <div>
-                <q className="text-xl">Fieldx is for teams that care about <br /> their product growth.</q>
-                <p className="text-xl font-bold">CEO, FieldX</p>
-                </div>
-                
+          <p className="font-semibold text-xl text-primary">About Us</p>
+          <h3 className="text-4xl mt-5 font-extrabold">
+            A dedicated solution for <br /> startups and enterprises
+          </h3>
+          <p className="text-xl mt-10">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem{" "}
+            <br /> accusantium doloremque laudantium, totam rem aperiam,
+            <br /> eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto <br /> beatae vitae dicta sunt explicabo.
+          </p>
+          <div className="flex justify-center items-center mt-20 gap-x-12 mr-24">
+            <img src={p1} alt="" />
+            <div>
+              <q className="text-xl">
+                Fieldx is for teams that care about <br /> their product growth.
+              </q>
+              <p className="text-xl font-bold">CEO, FieldX</p>
             </div>
+          </div>
         </div>
       </div>
+      <Summary></Summary>
     </div>
   );
 };
