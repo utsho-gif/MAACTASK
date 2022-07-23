@@ -6,6 +6,7 @@ import gp from "../../asset/Group 34037.png";
 import gp1 from "../../asset/Group 34027.png";
 import p1 from "../../asset/Ellipse 1.png";
 import Summary from "./Summary";
+import FAQ from "./FAQ";
 
 const Home = () => {
   return (
@@ -140,6 +141,7 @@ const Home = () => {
         </div>
       </div>
       <Summary></Summary>
+      <FAQ></FAQ>
     </div>
   );
 };
