@@ -7,6 +7,7 @@ import gp1 from "../../asset/Group 34027.png";
 import p1 from "../../asset/Ellipse 1.png";
 import Summary from "./Summary";
 import FAQ from "./FAQ";
+import Collabs from "./Collabs";
 
 const Home = () => {
   return (
@@ -20,8 +21,8 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center mt-10 gap-5">
-        <button class="btn btn-primary">Request for Demo</button>
-        <button class="btn glass text-primary">Download</button>
+        <button className="btn btn-primary">Request for Demo</button>
+        <button className="btn glass text-primary">Download</button>
       </div>
 
       <div className="mt-16 relative">
@@ -47,8 +48,8 @@ const Home = () => {
           Make more out of your data
         </h2>
       </div>
-      <div class="grid grid-rows-3 grid-flow-col  mx-auto mt-16">
-        <div class="mx-auto row-start-1 row-end-4">
+      <div className="grid grid-rows-3 grid-flow-col  mx-auto mt-16">
+        <div className="mx-auto row-start-1 row-end-4">
           <div className="grid grid-rows-3 grid-flow-col gap-y-14">
             <div>
               <img src={gp} alt="" />
@@ -82,10 +83,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div class="mx-auto row-start-1 row-end-4 drop-shadow-2xl">
+        <div className="mx-auto row-start-1 row-end-4 drop-shadow-2xl">
           <img src={phone2} width={372} height={744} alt="" />
         </div>
-        <div class="mx-auto row-start-1 row-end-4">
+        <div className="mx-auto row-start-1 row-end-4">
           <div className="grid grid-rows-3 grid-flow-col gap-y-14">
             <div>
               <img src={gp} alt="" />
@@ -142,6 +143,7 @@ const Home = () => {
       </div>
       <Summary></Summary>
       <FAQ></FAQ>
+      <Collabs></Collabs>
     </div>
   );
 };
