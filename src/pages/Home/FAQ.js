@@ -1,224 +1,116 @@
-import React from 'react';
+import React from "react";
+import { Fragment, useState } from "react";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
 
 const FAQ = () => {
-    return (
+  const [open, setOpen] = useState(0);
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
+  return (
+    <div
+      className="px-28 py-36 text-white"
+      style={{ backgroundColor: "#0052cc" }}
+    >
+      <h4 className="text-xl text-center">Common Question</h4>
+      <h2 className="text-5xl text-center mt-6">Frequently asked questions</h2>
+      <div className="flex justify-center gap-x-8 mt-20">
         <div>
-            <h4 className='text-xl text-center'>Common Question</h4>
-            <h2 className='text-5xl text-center mt-6'>Frequently asked questions</h2>
-            <div className='flex juistify-center items-center mt-20 gap-x-3'>
-                <div>
-                <div class="accordion" id="accordionExample">
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingOne">
-      <button class="
-        accordion-button
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-        aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the first item's accordion body.</strong> It is shown by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingTwo">
-      <button class="
-        accordion-button
-        collapsed
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-        aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingThree">
-      <button class="
-        accordion-button
-        collapsed
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-        aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-                </div>
-                <div>
-                <div class="accordion" id="accordionExample">
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingOne">
-      <button class="
-        accordion-button
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-        aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the first item's accordion body.</strong> It is shown by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingTwo">
-      <button class="
-        accordion-button
-        collapsed
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-        aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-white border border-gray-200">
-    <h2 class="accordion-header mb-0" id="headingThree">
-      <button class="
-        accordion-button
-        collapsed
-        relative
-        flex
-        items-center
-        w-full
-        py-4
-        px-5
-        text-base text-gray-800 text-left
-        bg-white
-        border-0
-        rounded-none
-        transition
-        focus:outline-none
-      " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-        aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body py-4 px-5">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-                </div>
-            </div>
+          <Fragment>
+            <Accordion
+              className="bg-white p-8 rounded-lg"
+              open={open === 1}
+              onClick={() => handleOpen(1)}
+            >
+              <AccordionHeader>
+                What kind of data can I see in FieldX?
+              </AccordionHeader>
+              <AccordionBody>
+                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in voluptate.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              className="bg-white p-8 my-8 rounded-lg"
+              open={open === 2}
+              onClick={() => handleOpen(2)}
+            >
+              <AccordionHeader>
+                Does Bizzy read my customers' data?
+              </AccordionHeader>
+              <AccordionBody>
+                We're not always in the position that we want to be at. We're
+                constantly growing. We're constantly making mistakes. We're
+                constantly trying to express ourselves and actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              className="bg-white p-8 rounded-lg"
+              open={open === 3}
+              onClick={() => handleOpen(3)}
+            >
+              <AccordionHeader>
+                What's your refund policy?
+              </AccordionHeader>
+              <AccordionBody>
+                We're not always in the position that we want to be at. We're
+                constantly growing. We're constantly making mistakes. We're
+                constantly trying to express ourselves and actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+          </Fragment>
         </div>
-    );
+        <div>
+          <Fragment>
+            <Accordion
+              className="bg-white p-8 rounded-lg"
+              open={open === 4}
+              onClick={() => handleOpen(4)}
+            >
+              <AccordionHeader>How do you take payments?</AccordionHeader>
+              <AccordionBody>
+                We're not always in the position that we want to be at. We're
+                constantly growing. We're constantly making mistakes. We're
+                constantly trying to express ourselves and actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              className="bg-white p-8 my-8 rounded-lg"
+              open={open === 5}
+              onClick={() => handleOpen(5)}
+            >
+              <AccordionHeader>
+                Can I track website on fieldX?
+              </AccordionHeader>
+              <AccordionBody>
+                We're not always in the position that we want to be at. We're
+                constantly growing. We're constantly making mistakes. We're
+                constantly trying to express ourselves and actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              className="bg-white p-8 rounded-lg"
+              open={open === 6}
+              onClick={() => handleOpen(6)}
+            >
+              <AccordionHeader>
+                What makes Bizzy analytics tools?
+              </AccordionHeader>
+              <AccordionBody>
+                We're not always in the position that we want to be at. We're
+                constantly growing. We're constantly making mistakes. We're
+                constantly trying to express ourselves and actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+          </Fragment>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default FAQ;
